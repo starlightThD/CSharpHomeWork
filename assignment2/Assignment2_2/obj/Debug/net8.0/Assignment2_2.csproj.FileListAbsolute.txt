@@ -1,0 +1,14 @@
+C:\Users\ThD\Desktop\FileCom\code\C#\Assignment2_2\bin\Debug\net8.0\Assignment2_2.exe
+C:\Users\ThD\Desktop\FileCom\code\C#\Assignment2_2\bin\Debug\net8.0\Assignment2_2.deps.json
+C:\Users\ThD\Desktop\FileCom\code\C#\Assignment2_2\bin\Debug\net8.0\Assignment2_2.runtimeconfig.json
+C:\Users\ThD\Desktop\FileCom\code\C#\Assignment2_2\bin\Debug\net8.0\Assignment2_2.dll
+C:\Users\ThD\Desktop\FileCom\code\C#\Assignment2_2\bin\Debug\net8.0\Assignment2_2.pdb
+C:\Users\ThD\Desktop\FileCom\code\C#\Assignment2_2\obj\Debug\net8.0\Assignment2_2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ThD\Desktop\FileCom\code\C#\Assignment2_2\obj\Debug\net8.0\Assignment2_2.AssemblyInfoInputs.cache
+C:\Users\ThD\Desktop\FileCom\code\C#\Assignment2_2\obj\Debug\net8.0\Assignment2_2.AssemblyInfo.cs
+C:\Users\ThD\Desktop\FileCom\code\C#\Assignment2_2\obj\Debug\net8.0\Assignment2_2.csproj.CoreCompileInputs.cache
+C:\Users\ThD\Desktop\FileCom\code\C#\Assignment2_2\obj\Debug\net8.0\Assignment2_2.dll
+C:\Users\ThD\Desktop\FileCom\code\C#\Assignment2_2\obj\Debug\net8.0\refint\Assignment2_2.dll
+C:\Users\ThD\Desktop\FileCom\code\C#\Assignment2_2\obj\Debug\net8.0\Assignment2_2.pdb
+C:\Users\ThD\Desktop\FileCom\code\C#\Assignment2_2\obj\Debug\net8.0\Assignment2_2.genruntimeconfig.cache
+C:\Users\ThD\Desktop\FileCom\code\C#\Assignment2_2\obj\Debug\net8.0\ref\Assignment2_2.dll
