@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ThD\\Desktop\\FileCom\\code\\C#\\Assignment2_2\\Assignment2_2.csproj",
+      "projectUniqueName": "C:\\Users\\ThD\\Desktop\\FileCom\\CSharpHomeWork\\assignment2\\Assignment2_2\\Assignment2_2.csproj",
       "projectName": "Assignment2_2",
-      "projectPath": "C:\\Users\\ThD\\Desktop\\FileCom\\code\\C#\\Assignment2_2\\Assignment2_2.csproj",
+      "projectPath": "C:\\Users\\ThD\\Desktop\\FileCom\\CSharpHomeWork\\assignment2\\Assignment2_2\\Assignment2_2.csproj",
       "packagesPath": "C:\\Users\\ThD\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ThD\\Desktop\\FileCom\\code\\C#\\Assignment2_2\\obj\\",
+      "outputPath": "C:\\Users\\ThD\\Desktop\\FileCom\\CSharpHomeWork\\assignment2\\Assignment2_2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
