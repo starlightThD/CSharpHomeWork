@@ -311,6 +311,7 @@ namespace assignment5
                 else
                 {
                     Console.WriteLine("No Result Found.");
+                    return null;
                 }
             }
             else
@@ -354,6 +355,7 @@ namespace assignment5
             else
             {
                 Console.WriteLine("No Result Found.");
+                return null;
             }
             return new List<Order>();   
         }
