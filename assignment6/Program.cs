@@ -4,23 +4,78 @@ using System.Linq;
 
 namespace assignment6
 {
-        class OrderDeatils
+        public class OrderDeatils
+        {
+            protected int Index { get; set; } = 0;
+            protected string ItemName { get; set; } = string.Empty;
+            protected int Number { get; set; } = 0;
+            protected int Amount { get; set; } = 0;
+
+        public OrderDeatils()
+        {
+            Index = 0;
+            ItemName = string.Empty;
+            Number = 0;
+            Amount = 0;
+        }
+        public OrderDeatils(int Index, string ItemName, int Number, int Amount)
+        {
+            this.Index = Index;
+            this.ItemName = ItemName;
+            this.Number = Number;
+            this.Amount = Amount;
+        }
+        public int getIndex()
+        {
+            return Index;
+        }
+        public string getItemName()
+        {
+            return ItemName;
+        }
+        public int getNumber()
+        {
+            return Number;
+        }
+        public int getAmount()
+        {
+            return Amount;
+        }
+
+    }
+        class Order
         {
             protected int OrderId { get; set; }
             protected string OrderName { get; set; } = string.Empty;
             protected string OrderCustomer { get; set; } = string.Empty;
             protected int OrderAmount { get; set; }
-        }
-        class Order : OrderDeatils
-        {
-            public Order(int OrderId, string OrderName, string OrderCustomer, int OrderAmount)
+
+            public List<OrderDeatils> OrderDeatilsList = new List<OrderDeatils>();
+        public Order(int OrderId, string OrderName, string OrderCustomer, int OrderAmount)
             {
                 this.OrderId = OrderId;
                 this.OrderName = OrderName;
                 this.OrderCustomer = OrderCustomer;
                 this.OrderAmount = OrderAmount;
             }
-            public int getOrderId()
+        public Order()
+        {
+            OrderId = 0;
+            OrderName = string.Empty;
+            OrderCustomer = string.Empty;
+            OrderAmount = 0;
+        }
+
+        public void AddOrderDeatils(int Index, string ItemName, int Number, int Amount)
+        {
+            OrderDeatils OrderDeatils = new OrderDeatils(Index, ItemName, Number, Amount);
+            OrderDeatilsList.Add(OrderDeatils);
+        }
+        public List<OrderDeatils> getOrderDeatilsList()
+        {
+            return OrderDeatilsList;
+        }
+        public int getOrderId()
             {
                 return OrderId;
             }
@@ -50,7 +105,11 @@ namespace assignment6
             }
             public void setOrderAmount(int OrderAmount)
             {
-                this.OrderAmount = OrderAmount;
+                this.OrderAmount = 0;
+                foreach (var order in OrderDeatilsList)
+                {
+                    this.OrderAmount += order.getAmount();
+            }
             }
             public override bool Equals(object? obj)
             {

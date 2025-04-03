@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            AmountText = new TextBox();
-            OrderAmount = new Label();
+            OrderDetail = new Label();
             CustomerText = new TextBox();
             OrderCustomer = new Label();
             NameText = new TextBox();
@@ -40,30 +39,22 @@
             flowLayoutPanel1 = new FlowLayoutPanel();
             OKButton = new Button();
             Cancel = new Button();
+            AmountText = new TextBox();
             tableLayoutPanel1.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
-            // AmountText
+            // OrderDetail
             // 
-            AmountText.Dock = DockStyle.Fill;
-            AmountText.Location = new Point(143, 263);
-            AmountText.Multiline = true;
-            AmountText.Name = "AmountText";
-            AmountText.Size = new Size(654, 62);
-            AmountText.TabIndex = 7;
-            // 
-            // OrderAmount
-            // 
-            OrderAmount.AutoSize = true;
-            OrderAmount.Dock = DockStyle.Fill;
-            OrderAmount.FlatStyle = FlatStyle.Flat;
-            OrderAmount.Location = new Point(3, 260);
-            OrderAmount.Name = "OrderAmount";
-            OrderAmount.Size = new Size(134, 68);
-            OrderAmount.TabIndex = 3;
-            OrderAmount.Text = "OrderAmount";
-            OrderAmount.TextAlign = ContentAlignment.MiddleCenter;
+            OrderDetail.AutoSize = true;
+            OrderDetail.Dock = DockStyle.Fill;
+            OrderDetail.FlatStyle = FlatStyle.Flat;
+            OrderDetail.Location = new Point(3, 260);
+            OrderDetail.Name = "OrderDetail";
+            OrderDetail.Size = new Size(134, 68);
+            OrderDetail.TabIndex = 3;
+            OrderDetail.Text = "OrderAmount";
+            OrderDetail.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // CustomerText
             // 
@@ -136,11 +127,11 @@
             tableLayoutPanel1.Controls.Add(OrderID, 0, 0);
             tableLayoutPanel1.Controls.Add(OrderName, 0, 1);
             tableLayoutPanel1.Controls.Add(OrderCustomer, 0, 2);
-            tableLayoutPanel1.Controls.Add(AmountText, 1, 3);
-            tableLayoutPanel1.Controls.Add(OrderAmount, 0, 3);
+            tableLayoutPanel1.Controls.Add(OrderDetail, 0, 3);
             tableLayoutPanel1.Controls.Add(CustomerText, 1, 2);
             tableLayoutPanel1.Controls.Add(IDText, 1, 0);
             tableLayoutPanel1.Controls.Add(NameText, 1, 1);
+            tableLayoutPanel1.Controls.Add(AmountText, 1, 3);
             tableLayoutPanel1.Dock = DockStyle.Top;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -187,6 +178,15 @@
             Cancel.UseVisualStyleBackColor = true;
             Cancel.Click += Cancel_Click;
             // 
+            // AmountText
+            // 
+            AmountText.Dock = DockStyle.Fill;
+            AmountText.Location = new Point(143, 263);
+            AmountText.Multiline = true;
+            AmountText.Name = "AmountText";
+            AmountText.Size = new Size(654, 62);
+            AmountText.TabIndex = 7;
+            // 
             // MsgForm
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
@@ -206,8 +206,7 @@
         }
 
         #endregion
-        private TextBox AmountText;
-        private Label OrderAmount;
+        private Label OrderDetail;
         private TextBox CustomerText;
         private Label OrderCustomer;
         private TextBox NameText;
@@ -218,5 +217,6 @@
         private FlowLayoutPanel flowLayoutPanel1;
         private Button OKButton;
         private Button Cancel;
+        private TextBox AmountText;
     }
 }

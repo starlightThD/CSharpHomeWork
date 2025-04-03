@@ -150,6 +150,7 @@ namespace assignment6
                 OrderList.Rows.Add(order.getOrderId(), order.getOrderName(), order.getOrderCustomer(), order.getOrderAmount());
             }
         }
+       
 
         private void SearchOrderButton_Click(object sender, EventArgs e)
         {
@@ -187,6 +188,23 @@ namespace assignment6
                 foreach (var order in result)
                 {
                     OrderList.Rows.Add(order.getOrderId(), order.getOrderName(), order.getOrderCustomer(), order.getOrderAmount());
+                }
+            }
+        }
+
+        private void OrderList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                int orderId = Convert.ToInt32(OrderList.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn1"].Value);
+                Order selectedOrder = _orderService.getOrderList().FirstOrDefault(o => o.getOrderId() == orderId);
+                if (selectedOrder != null)
+                {
+                    DetailList.Rows.Clear();
+                    foreach (var detail in selectedOrder.getOrderDeatilsList())
+                    {
+                        DetailList.Rows.Add(detail.getIndex(), detail.getItemName(), detail.getNumber(), detail.getAmount());
+                    }
                 }
             }
         }
