@@ -98,7 +98,7 @@ namespace assignment7
         {
             using (var context = new OrderContext())
             {
-                return context.Orders.Include(o => o.OrderDetailsList).ToList();
+                return context.Orders.Include(o => o.OrderDetailsList).AsNoTracking().ToList();
             }
         }
 

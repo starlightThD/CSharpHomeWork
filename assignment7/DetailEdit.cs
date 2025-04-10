@@ -26,7 +26,7 @@ namespace assignment7
                 var order = context.Orders.Include(o => o.OrderDetailsList).SingleOrDefault(o => o.OrderId == _orderId);
                 if (order != null)
                 {
-                    _orderDetailsList = new List<OrderDetails>(order.OrderDetailsList);
+                    _orderDetailsList = [.. order.OrderDetailsList];
                 }
                 else
                 {
@@ -128,10 +128,30 @@ namespace assignment7
             {
                 using (var context = new OrderContext())
                 {
-                    var order = context.Orders.Include(o => o.OrderDetailsList).SingleOrDefault(o => o.OrderId == _orderId);
+                    var order = context.Orders
+                        .Include(o => o.OrderDetailsList)
+                        .SingleOrDefault(o => o.OrderId == _orderId);
+
                     if (order != null)
                     {
-                        order.OrderDetailsList = _orderDetailsList;
+                        // 清空原有 OrderDetails
+                        order.OrderDetailsList.Clear();
+                        context.SaveChanges(); // 立即删除旧数据
+
+                        // 添加新 OrderDetails（确保未被跟踪）
+                        foreach (var detail in _orderDetailsList)
+                        {
+                            // 创建新实体，避免引用父窗口的实例
+                            var newDetail = new OrderDetails
+                            {
+                                Index = detail.Index,
+                                ItemName = detail.ItemName,
+                                Number = detail.Number,
+                                Amount = detail.Amount
+                            };
+                            order.OrderDetailsList.Add(newDetail);
+                        }
+
                         order.SetOrderAmount();
                         context.SaveChanges();
                     }

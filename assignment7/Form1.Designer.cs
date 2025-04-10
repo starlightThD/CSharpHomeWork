@@ -374,6 +374,7 @@ namespace assignment7
                             if (detailEdit.ShowDialog() == DialogResult.OK)
                             {
                                 UpdateOrderList();
+                                OrderList_CellMouseDoubleClick(sender,e);
                             }
                         }
                     }
